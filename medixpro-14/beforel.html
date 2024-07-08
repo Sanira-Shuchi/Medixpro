@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MEDINOVA - Hospital Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- normalize css -->
+<link rel = "stylesheet" href = "css/normalize.css">
+<!-- custom css -->
+<link rel = "stylesheet" href = "css/main.css">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon">
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Stylesheet -->
+<link href="css/style.css" rel="stylesheet">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- normalize css -->
+    <link rel = "stylesheet" href = "css/normalize.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "css/main.css">
+</head>
+
+<style>
+    .dropbtn {
+      background-color: #fa87b7;
+      color: rgb(7, 7, 7);
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      width: 150%;
+      
+      
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .color{
+        color: #070707;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #62cef9;
+    }
+
+
+    
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #a3edfd;
+  color: #fd60bb;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #070707 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+    </style>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>medixpro@example.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="https://facebook.com/freewebsitecode/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://freewebsitecode.com/">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://freewebsitecode.com/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://freewebsitecode.com/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="https://youtube.com/freewebsitecode/">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1  class="m-0 text-uppercase text-primary">
+                        
+                        <div class="logo">
+                            
+                        <i class="ri-menu-line icon icon-0 menu"></i>
+                        
+                        <h1 class="mm">Medix<span class="nn">Pro</span><i class="fa fa-clinic-medical me-2"></i></h1>
+                    </div></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href=".html" class="nav-item nav-link">Service</a>
+                        
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                                <a href="team.html" class="dropdown-item">The Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                
+                                <a href="search.html" class="dropdown-item">Search</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="index.html" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Logout </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    
+
+
+
+    <!-- package services section -->
+        <section id = "package-service" class = "package-service py text-center">
+            <div class = "container">
+                <div class = "package-service-head text-white">
+                    <h1>Health Service</h1>
+                    <p class = "text text-lg">Best service package for you</p>
+                </div>
+                <div class = "package-service-inner grid">
+                    <div class = "package-service-item">
+                        <div class = "icon flex">
+                            <i class = "fas fa-phone fa-2x"></i>
+                        </div>
+                        <h1> Doctor any time </h1>
+                        <img src="images/doc-4.png" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p>
+                        <a href = "doctor.html" class = "btn btn-blue">Go for service</a>
+                    </div>
+
+
+                    
+
+                    <div class = "package-service-item ">
+                        <div class = "icon flex">
+                            <i class = "fas fa-hospital-alt fa-2x"></i>
+                        </div>
+                        <h1>Book your Doctor</h1>
+                        <img src="images/hos.png" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p><br><br>
+                        <div class="dropdown">
+                            <button class="dropbtn">Go for service</button>
+                            <div class="dropdown-content">
+                                <h3>Select hospital</h3>
+                            <a href="booking.html">Hospital 1</a>
+                            <a href="booking.html">Hospital 2</a>
+                            <a href="booking.html">Hospital 3</a>
+                            <a href="booking.html">Hospital 4</a>
+                            <a href="booking.html">Hospital 5</a>
+                            <a href="booking.html">Hospital 6</a>
+                            </div>
+                          </div>
+                    </div>
+                    
+                    <div class = "package-service-item ">
+                        <div class = "icon flex">
+                            <i class = "fas fa-comments fa-2x"></i>
+                        </div>
+                        <h1>Pharmacy for you</h1>
+                        <img src="img/ph.jpg" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p><br><br>
+                        <div class="dropdown">
+                            <button class="dropbtn">Go for service</button>
+                            <div class="dropdown-content">
+                                <h3>Select Pharmacy</h3>
+                            <a href="shop.html">Pharmacy 1</a>
+                            <a href="shop.html">Pharmacy 2</a>
+                            <a href="shop.html">Pharmacy 3</a>
+                            <a href="shop.html">Pharmacy 1</a>
+                            <a href="shop.html">Pharmacy 2</a>
+                            <a href="shop.html">Pharmacy 3</a>
+                            </div>
+                          </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+        <!-- end of package services section -->
+
+        <section id = "package-service" class = "package-service py text-center">
+            <div class = "container">
+                <div class = "package-service-head text-white">
+                    <h1> Blood Services</h1>
+    
+                    <p class = "text text-lg">Best service package for you</p>
+                </div>
+                <div class = "package-service-inner grid">
+                    
+                    <div class = "package-service-item ">
+                        <div class = "icon flex">
+                            <i class = "fas fa-phone fa-2x"></i>
+                        </div>
+                        <h1>Requste for donation</h1>
+                        <img src="images/req.jpg" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p><br><br>
+                        <div class="dropdown">
+                            <button class="dropbtn">Go for service</button>
+                            <div class="dropdown-content">
+                                <h3>Select User </h3>
+                            <div class="popup" onclick="myFunction()"><h4 class="color">User 1 (A+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 1</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 2 (A-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 2</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 3 (B-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 3</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 4 (B+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 4</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 5 (AB-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 5</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 6 (AB+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 6</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 7 (O-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 7</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 8 (O+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 8</span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class = "package-service-item">
+                        <div class = "icon flex">
+                            <i class = "fas fa-comments fa-2x"></i>
+                        </div>
+                        <h1>find your blood </h1>
+                        <img src="images/blood.png" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p><br><br>
+                        <div class="dropdown">
+                            <button class="dropbtn">Go for service</button>
+                            <div class="dropdown-content">
+                                <h3>Select blood group </h3>
+                            <div class="popup" onclick="myFunction()"><h4 class="color">User 1 (A+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully wait for reponse</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 2 (A-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 2</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 3 (B-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 3</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 4 (B+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 4</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 5 (AB-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 5</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 6 (AB+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 6</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 7 (O-)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 7</span>
+                              </div><br>
+                              <div class="popup" onclick="myFunction()"><h4 class="color">User 8 (O+)</h4>
+                                <span class="popuptext" id="myPopup">Requste send Successfully to user 8</span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    
+
+                    <div class = "package-service-item ">
+                        <div class = "icon flex">
+                            <i class = "fas fa-hospital-alt fa-2x"></i>
+                        </div>
+                        <h1>Donate your blood</h1>
+                        <img src="images/donate.png" alt="Nature" class="responsive" width="600" height="400">
+
+                        <p class = "text text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, asperiores. Expedita, reiciendis quos beatae at consequatur voluptatibus fuga iste adipisci.</p>
+                        <a href = "bloodd.html" class = "btn btn-blue">Go for service</a>
+                    </div>
+                    
+                    
+                
+                    
+                </div>
+            </div>
+        </section>
+
+
+
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h1 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Doctor</h1>
+                <h1 class="display-4 mb-4">Find A Healthcare Professionals</h1>
+                <h5 class="text-white fw-normal">Duo ipsum erat stet dolor sea ut nonumy tempor. Tempor duo lorem eos sit sed ipsum takimata ipsum sit est. Ipsum ea voluptua ipsum sit justo</h5>
+            </div>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <select class="form-select border-primary w-25" style="height: 60px;">
+                        <option selected>Department</option>
+                        <option value="1">Department 1</option>
+                        <option value="2">Department 2</option>
+                        <option value="3">Department 3</option>
+                    </select>
+                    <input type="text" class="form-control border-primary w-50" placeholder="Keyword">
+                    <button class="btn btn-dark border-0 w-25">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+
+
+    
+
+    
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+        </script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src = "js/script.js"></script>
+</body>
+
+</html>
